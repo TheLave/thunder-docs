@@ -1,0 +1,7 @@
+<pre
+  *ngIf="codeBlock"
+  [className]="'language-' + language"
+  data-remove-trailing="true"
+  data-remove-indent="true"
+  data-left-trim="true"
+><code [className]="'language-' + language" [innerHTML]="codeBlock"></code></pre>

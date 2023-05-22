@@ -1,0 +1,23 @@
+.nav {
+  height: 40px;
+  color: var(--primary);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.padded {
+    padding-left: 40px;
+  }
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--text-color-dark);
+  }
+
+  &.active {
+    background-color: var(--primary);
+    color: var(--text-color-dark);
+  }
+}

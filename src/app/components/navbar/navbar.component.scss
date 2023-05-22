@@ -1,0 +1,28 @@
+nav {
+  background-color: var(--secondary);
+  color: var(--text-color-light);
+  height: 100%;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+
+  .nav-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .subroutes {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      * {
+        width: 100%;
+      }
+    }
+  }
+}

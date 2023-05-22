@@ -1,0 +1,40 @@
+<app-input label="Search function" [(value)]="searchTerm"></app-input>
+
+<br />
+
+<ng-container *ngIf="code.client && hasChildren(code.client)">
+  <app-title>Client</app-title>
+  <div class="functions">
+    <div *ngFor="let function of filteredClientFunctions | keyvalue">
+      <span>{{ function.key }}</span>
+      <app-codeblock
+        [code]="function.value"
+        [language]="language"
+      ></app-codeblock>
+    </div>
+  </div>
+
+  <br />
+</ng-container>
+
+<ng-container *ngIf="code.server && hasChildren(code.server)">
+  <app-title>Server</app-title>
+  <div class="functions">
+    <div *ngFor="let function of filteredServerFunctions | keyvalue">
+      <span>{{ function.key }}</span>
+      <app-codeblock
+        [code]="function.value"
+        [language]="language"
+      ></app-codeblock>
+    </div>
+  </div>
+</ng-container>
+
+<div
+  *ngIf="
+    (!code.client || !hasChildren(code.client)) &&
+    (!code.server || !hasChildren(code.server))
+  "
+>
+  There is nothing here yet.
+</div>

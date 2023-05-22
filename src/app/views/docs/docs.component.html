@@ -1,0 +1,40 @@
+<app-title>{{ routeLabel }}</app-title>
+<p>Welcome to the documentation of the Thunder framework for RedM.</p>
+<ng-container *ngIf="route === '/docs'">
+  <p>Select any of the following components to see the documentation for it.</p>
+  <div class="navigation">
+    <app-button
+      label="Callbacks"
+      [full]="true"
+      routerLink="/docs/callbacks"
+    ></app-button>
+    <app-button
+      label="Character"
+      [full]="true"
+      routerLink="/docs/character"
+    ></app-button>
+    <app-button
+      label="Events"
+      [full]="true"
+      routerLink="/docs/events"
+    ></app-button>
+    <app-button label="Main" [full]="true" routerLink="/docs/main"></app-button>
+    <app-button
+      label="Nuicallbacks"
+      [full]="true"
+      routerLink="/docs/nuicallbacks"
+    ></app-button>
+    <app-button
+      label="Player"
+      [full]="true"
+      routerLink="/docs/player"
+    ></app-button>
+    <app-button
+      label="Utils"
+      [full]="true"
+      routerLink="/docs/utils"
+    ></app-button>
+  </div>
+</ng-container>
+<br />
+<router-outlet></router-outlet>

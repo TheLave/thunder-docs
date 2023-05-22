@@ -1,0 +1,6 @@
+<button [ngClass]="classes" (click)="onClick()" [disabled]="!enabled" appRipple>
+  <div class="icon" *ngIf="icon">
+    <app-icon [src]="icon" [color]="iconColor"></app-icon>
+  </div>
+  <div class="label">{{ label }}</div>
+</button>

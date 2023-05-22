@@ -1,0 +1,15 @@
+<a
+  class="nav"
+  *ngIf="link"
+  [routerLink]="link"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  [ngClass]="{ padded: padded }"
+>
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</a>
+<div class="nav" *ngIf="!link" [ngClass]="{ padded: padded }">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</div>
+
+<ng-template #content><ng-content></ng-content></ng-template>
