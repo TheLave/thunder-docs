@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --cname=wanderzeit.thelave.nl --base-href=https://thelave.github.io/thunder-docs/"
+    "deploy": "ng deploy --cname=wanderzeit.thelave.nl"
   },
   "private": true,
   "dependencies": {
